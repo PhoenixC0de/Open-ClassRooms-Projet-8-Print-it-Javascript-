@@ -216,12 +216,11 @@ header {
   z-index: -1;
   object-fit: cover;
   object-position: center;
+  display: none;
 }
 
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
-.banner-img.active {
-  display: block;
-}
+
 
 
 /* Gestion des fleches du carrousel */
@@ -230,21 +229,25 @@ header {
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
-  display: flex;
-  justify-content: space-between;
   pointer-events: none;
 }
 
+.arrow_left,
+.arrow_right {
+  position: absolute;
+  pointer-events: all;
+}
+
 #banner .arrow_left {
-  left: 10px;
+  left: 50px;
 }
 
 #banner .arrow_right {
-  right: 10px;
+  right: 50px;
 }
 
 .arrows img {
-  width: 20px;
+  width: 40px;
   height: auto;
 }
 
@@ -266,7 +269,7 @@ header {
   margin-inline: 5px;
   width: 13px;
   height: 13px;
-  background-color: #ffffff00;
+  background-color: #00000039;
   border: 3px solid #fff;
   border-radius: 100%;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
